@@ -2,7 +2,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Pizza pizzaVar;
         Cook c1 = new Cook("Johny", 5);
 
         Pizza p1 = new Pizza("Piedone", 2000);
