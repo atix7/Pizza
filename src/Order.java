@@ -12,6 +12,7 @@ public class Order {
         lastOrderID++;
         pizzas = new ArrayList<Pizza>();
         this.orderId = lastOrderID;
+        this.sizeOfPizza = size;
     }
 
     public void addPizza(Pizza pizza) {
@@ -32,17 +33,17 @@ public class Order {
 
     public double getTotalPrice() {
         double total = 0;
-        for (Pizza pizz : pizzas) {
-            sizeOfPizza= pizz.getSize();
+        for (Pizza pizza : pizzas) {
+            sizeOfPizza= this.sizeOfPizza;
             switch (sizeOfPizza) {
                 case small -> {
-                    total += 0.8 * pizz.getPrice();
+                    total += 0.5 * pizza.getPrice();
                 }
                 case medium -> {
-                    total += pizz.getPrice();
+                    total += pizza.getPrice();
                 }
                 case large -> {
-                    total += 1.5 * pizz.getPrice();
+                    total += 1.5 * pizza.getPrice();
                 }
             }
         }

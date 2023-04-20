@@ -4,18 +4,18 @@ public class Pizza {
     private Toppings top;
     private Size pSize;
 
-    public Pizza(String name, int price, Size size) {
+    /*public Pizza(String name, int price, Size size) {
         this.name = name;
         this.price = price;
         this.pSize = size;
+    }*/
+    public Pizza(String name, int price) {
+        this.name = name;
+        this.price = price;
     }
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getPrice() {
@@ -34,11 +34,4 @@ public class Pizza {
         return pSize;
     }
 
-    public void setpSize(Size pSize) {
-        this.pSize = pSize;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
 }
