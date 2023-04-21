@@ -34,7 +34,6 @@ public class Order {
     public double getTotalPrice() {
         double total = 0;
         for (Pizza pizza : pizzas) {
-            sizeOfPizza= this.sizeOfPizza;
             switch (sizeOfPizza) {
                 case small -> {
                     total += 0.5 * pizza.getPrice();
