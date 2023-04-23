@@ -5,6 +5,7 @@ public class Order {
     private int orderId;
     static int lastOrderID;
     private Size sizeOfPizza;
+    private Toppings topOfPizza;
 
     private ArrayList<Pizza> pizzas;
 
@@ -13,6 +14,7 @@ public class Order {
         pizzas = new ArrayList<Pizza>();
         this.orderId = lastOrderID;
         this.sizeOfPizza = size;
+        this.topOfPizza = top;
     }
 
     public void addPizza(Pizza pizza) {
@@ -44,6 +46,12 @@ public class Order {
                 case large -> {
                     total += 1.5 * pizza.getPrice();
                 }
+            }
+            switch (topOfPizza){
+                case meat -> total+=1000;
+                case cheese -> total+=1100;
+                case vega -> total+=800;
+                case tomato -> total+=500;
             }
         }
         return total;
