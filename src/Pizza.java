@@ -3,15 +3,12 @@ public class Pizza {
     private int price;
     private Toppings top;
     private Size pSize;
+    Recepies recepie;
 
-    /*public Pizza(String name, int price, Size size) {
+    public Pizza(String name, int price,Recepies recepie) {
         this.name = name;
         this.price = price;
-        this.pSize = size;
-    }*/
-    public Pizza(String name, int price) {
-        this.name = name;
-        this.price = price;
+        this.recepie= recepie;
     }
 
     public String getName() {
@@ -22,16 +19,12 @@ public class Pizza {
         return price;
     }
 
-    public Toppings getTop() {
-        return top;
-    }
-
-    public void setTop(Toppings top) {
-        this.top = top;
-    }
-
     public Size getSize() {
         return pSize;
+    }
+
+    public void storageMinus(){
+
     }
 
 }

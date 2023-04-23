@@ -1,11 +1,15 @@
 public class Main {
 
     public static void main(String[] args) {
+        Recepies Piedone = new Recepies("Piedone",1.5,0.2,0.6);  //Ez egy recept
+        Recepies Margaritha = new Recepies("Margaritha",1.5,0.2,0.6);  //Ez egy recept
 
-        Cook c1 = new Cook("Johny", 5);
+        Storage s1 = new Storage(10,10,100);   //Ez a raktár
 
-        Pizza p1 = new Pizza("Piedone", 2000);
-        Pizza p2 = new Pizza("Margaritha", 2500);
+        Cook c1 = new Cook("Johny", 5);     //Ez lesz a szakács
+
+        Pizza p1 = new Pizza("Piedone", 2000,Piedone);
+        Pizza p2 = new Pizza("Margaritha", 2500,Margaritha);
 
         System.out.println("The cook " + c1.getName() + ", and his skill level is : " + c1.getKnowledgeLevel());
 
