@@ -6,15 +6,21 @@ public class Order {
     static int lastOrderID;
     private Size sizeOfPizza;
     private Toppings topOfPizza;
+    private Recepies recepie;
+
 
     private ArrayList<Pizza> pizzas;
 
-    public Order(Toppings top, Size size) {
+    public Order(Toppings top, Size size,Recepies recepie) {
         lastOrderID++;
         pizzas = new ArrayList<Pizza>();
         this.orderId = lastOrderID;
         this.sizeOfPizza = size;
         this.topOfPizza = top;
+        this.recepie = recepie;
+        Storage.flour-= this.recepie.getFlour();
+        Storage.salt-= this.recepie.getSalt();
+        Storage.water-=this.recepie.getWater();
     }
 
     public void addPizza(Pizza pizza) {

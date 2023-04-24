@@ -1,7 +1,7 @@
 public class Storage {
-    private double flour;    // All ingredients are meant in grams
-    private double salt;
-    private double water;
+    static double flour;    // All ingredients are meant in grams
+    static double salt;
+    static double water;
 
     public Storage(double flour, double salt, double water) {
         this.flour = flour;
@@ -32,4 +32,5 @@ public class Storage {
     public void setWater(double water) {
         this.water = water;
     }
+
 }

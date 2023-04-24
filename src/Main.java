@@ -13,8 +13,8 @@ public class Main {
 
         System.out.println("The cook " + c1.getName() + ", and his skill level is : " + c1.getKnowledgeLevel());
 
-        Order o1 = new Order(Toppings.meat, Size.small);
-        Order o2 = new Order(Toppings.tomato, Size.medium);
+        Order o1 = new Order(Toppings.meat, Size.small,Piedone);
+        Order o2 = new Order(Toppings.tomato, Size.medium,Margaritha);
         o1.addPizza(p1);
         o1.addPizza(p1);
         printOrder(o1);
@@ -23,6 +23,9 @@ public class Main {
         o2.addPizza(p1);
         o2.addPizza(p2);
         printOrder(o2);
+        System.out.println("The amount of flour in storage: "+ Storage.flour);
+        System.out.println("The amount of salt in storage: "+ Storage.salt);
+        System.out.println("The amount of water in storage: "+ Storage.water);
 
         System.out.println("\nYou must pay: " + o1.getTotalPrice());
         System.out.println("You must pay: " + o2.getTotalPrice());
