@@ -1,36 +1,30 @@
 public class Pizza {
     private String name;
     private int price;
-    private Toppings top;
     private Size pSize;
+    private Recepies recepie;
+    private static int numberOfPizzas=0;
 
-    public Pizza(String name, int price, Size size) {
+    public Pizza(String name, int price,Recepies recepie, Size pSize) {
         this.name = name;
         this.price = price;
-        this.pSize = size;
+        this.recepie= recepie;
+        this.pSize = pSize;
+        numberOfPizzas++;
     }
-
-    public String getName() {
-        return name;
+    public static int getNumberOfPizzas(){
+        return numberOfPizzas;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getPrice() {
-        return price;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
-    public Toppings getTop() {
-        return top;
-    }
-
-    public void setTop(Toppings top) {
-        this.top = top;
-    }
-
-    public Size getSize() {
+    public Size getpSize() {
         return pSize;
     }
 
@@ -38,7 +32,28 @@ public class Pizza {
         this.pSize = pSize;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public Recepies getRecepie() {
+        return recepie;
     }
+
+    public void setRecepie(Recepies recepie) {
+        this.recepie = recepie;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public Size getSize() {
+        return pSize;
+    }
+
+    public void storageMinus(){
+
+    }
+
 }
